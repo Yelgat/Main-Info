@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { showSymbols } from '../lib/library.jsx';
+
 export default class App extends Component {
   constructor() {
     super();
@@ -16,22 +18,15 @@ export default class App extends Component {
     }
   }
 
-  gimmeSymbols(num, symbol) {
-    var useSymbol = (symbol === '$') ? '$' : '* ';
-    //replace % with empty stars
-    var fillSymbol = (symbol === '$') ? '' : '% ';
-    return Array(5).fill(fillSymbol).fill(useSymbol, 0, num).join('');
-  }
-
   render() {
     return(
       <div className="mainInfo">
         <h1 className="mainInfo__header">{this.state.companyName}</h1>
         <div className="mainInfo__rating">
-          <span className="mainInfo__rating__stars">{this.gimmeSymbols(5, '*')}</span> <span className="mainInfo__rating__numbers">{this.state.numberOfReviews} Reviews</span>
+          <span className="mainInfo__rating__stars">{showSymbols(5, '*')}</span> <span className="mainInfo__rating__numbers">{this.state.numberOfReviews} Reviews</span>
         </div>
         <div className="mainInfo__subInfo">
-          <div className="mainInfo__subInfo__dollars">{this.gimmeSymbols(4, '$')}</div>
+          <div className="mainInfo__subInfo__dollars">{showSymbols(4, '$')}</div>
           <div className="mainInfo__subInfo__type">{this.state.typeOfCompany}</div>
         </div>
 
