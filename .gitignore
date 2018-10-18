@@ -62,3 +62,6 @@ typings/
 
 # hide bundle
 bundle.js
+
+# hide DS_Store
+.DS_Store
