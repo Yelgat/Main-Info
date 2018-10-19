@@ -25,8 +25,8 @@ export default class App extends Component {
         <div className="mainInfo__rating">
           <span className="mainInfo__rating__stars">{showSymbols(3, '*')}</span> <span className="mainInfo__rating__numbers">{this.state.numberOfReviews} Reviews</span>
         </div>
-        <div className="mainInfo__subInfo">
-          <span className="mainInfo__subInfo__dollars">{showSymbols(4, '$')}</span> <span className="mainInfo__subInfo__type">{this.state.typeOfCompany}</span>
+        <div className="mainInfo__subMain">
+          <span className="mainInfo__subMain__dollars">{showSymbols(4, '$')}</span> <span className="mainInfo__subMain__type">{this.state.typeOfCompany}</span>
         </div>
       </div>
     );
