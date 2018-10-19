@@ -1,20 +1,61 @@
-$red: #900
-$green: #090
-$blue: #009
-$orange: #f90
+/***************/
+/*** IMPORTS ***/
+/***************/
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+/*****************/
+/*** VARIABLES ***/
+/*****************/
+
+$heading-font: 'Montserrat', sans-serif;
+$black: #313131
+$bg-gray: #f1f1f1
+$false-gray: #717171
+$white: #fff
+$yellow: #099
+
+
+/****************/
+/***  RESETS  ***/
+/****************/
 *
   margin: 0
   padding: 0
-  
-.main
-  background: $red
-  &__h1
-    color: $green
-  &__p
-    color: $blue
 
-p 
-  color: $red
-a
-  color: $orange
+body
+	background: $bg-gray
+
+h1
+  font-size: 28px
+
+/****************/
+/***  CUSTOM  ***/
+/****************/
+  
+.mainInfo
+  color: $black
+  background: $white
+  margin: 2%
+  padding: 2%
+  &__header
+    font-family: $heading-font
+    text-align: left
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 300
+  &__rating
+    display: block
+    &__stars
+      &__true
+        color: $yellow
+      &__false
+        color: $false-gray
+    &__numbers
+
+  &__subInfo
+  	display: block
+  	&__dollars
+  		display: inline
+  	&__type
+  		display: inline

@@ -23,16 +23,11 @@ export default class App extends Component {
       <div className="mainInfo">
         <h1 className="mainInfo__header">{this.state.companyName}</h1>
         <div className="mainInfo__rating">
-          <span className="mainInfo__rating__stars">{showSymbols(5, '*')}</span> <span className="mainInfo__rating__numbers">{this.state.numberOfReviews} Reviews</span>
+          <span className="mainInfo__rating__stars">{showSymbols(3, '*')}</span> <span className="mainInfo__rating__numbers">{this.state.numberOfReviews} Reviews</span>
         </div>
         <div className="mainInfo__subInfo">
-          <div className="mainInfo__subInfo__dollars">{showSymbols(4, '$')}</div>
-          <div className="mainInfo__subInfo__type">{this.state.typeOfCompany}</div>
+          <span className="mainInfo__subInfo__dollars">{showSymbols(4, '$')}</span> <span className="mainInfo__subInfo__type">{this.state.typeOfCompany}</span>
         </div>
-
-
-
-
       </div>
     );
   }
