@@ -26,5 +26,10 @@ const findStore = (store, cb) => {
 	YelgatMainModel.find(store).exec(db);
 }
 
+const insertMany = (data, cb) => {
+  YelgatMainModel.insertMany(data, cb);
+};
+
 exports.findAll = findAll;
 exports.findStore = findStore;
+exports.insertMany = insertMany;
